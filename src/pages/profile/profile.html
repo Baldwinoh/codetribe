@@ -1,0 +1,88 @@
+<!--
+  Generated template for the ProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>profilePage</ion-title>
+
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="profile">
+    <div class="image">
+        <img src="./assets/imgs/The general.PNG">
+    </div>
+
+
+
+    <ion-slides pager>
+
+
+        <ion-slide style="background-color:  #fefbd8">
+            <ion-list *ngFor="let info of deatilsInfo">
+                <ion-item>
+                    <p>{{info}}</p>
+                </ion-item>
+            </ion-list>
+
+        </ion-slide>
+
+        <ion-slide style="background-color:  #fefbd8">
+            <h2>Social Networking: </h2>
+            <ion-icon name="logo-twitter"> @BaldwinMahole</ion-icon>
+            <ion-icon name="logo-facebook"> Baldwinoh Mahole</ion-icon>
+            <ion-icon name="logo-linkedin"> Baldwinoh Mahole</ion-icon><br>
+            <ion-icon name="logo-whatsapp"> 072 062 0890</ion-icon><br>
+            <ion-icon name="logo-snapchat"> baldwinoh</ion-icon><br>
+            <ion-icon name="logo-instagram"> Bad Boy</ion-icon><br>
+            <ion-icon name="logo-skype"> @Bald</ion-icon><br>
+        </ion-slide>
+        <ion-slide style="background-color:  #fefbd8">
+            <h2>Favourite Programming Languages</h2>
+            <ion-icon ios="logo-apple" md="logo-android"></ion-icon>
+            <p>Ionic Framework</p>
+            <p>Angular Framework</p>
+            <p>C# </p>
+            <p>Java </p>
+            <p>Python Framework</p>
+        </ion-slide>
+        <ion-slide style="background-color: #fefbd8">
+            <div class="slide2">
+                <h2>Hobbies</h2>
+                <p>Watching soccer</p>
+                <p>Watching Movies</p>
+                <p>Playing soccer</p>
+                <p>Listening to Music</p>
+                <p>Writting the Code</p>
+            </div>
+        </ion-slide>
+    </ion-slides>
+
+    <button ion-button color="royal" round>
+        Save
+      </button>
+
+</ion-content>
+
+
+
+<ion-footer>
+    <ion-toolbar>
+        <ion-buttons start>
+            <button (click)="editInfo()" ion-button icon-only color="royal" round>
+           Edit
+        </button>
+        </ion-buttons>
+        <ion-buttons end>
+            <button (click)="logOut()" ion-button icon-only color="royal" round>
+         Log out
+        </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-footer>
