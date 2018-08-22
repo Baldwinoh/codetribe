@@ -9,7 +9,9 @@ import { HomePage } from '../pages/home/home';
 import { EditIfomationPage } from '../pages/edit-ifomation/edit-ifomation';
 import { RegisterPage } from './../pages/register/register';
 import { ServicesProvider } from '../providers/services/services';
+import { DetailsPage } from './../pages/details/details';
 import { Http ,HttpModule} from '@angular/http' 
+import { CodeTribePage } from './../pages/code-tribe/code-tribe';
 import { HttpClientModule } from '@angular/common/http'; 
 @NgModule({
   declarations: [
@@ -17,9 +19,13 @@ import { HttpClientModule } from '@angular/common/http';
     HomePage,
     ProfilePage,
     EditIfomationPage,
-    RegisterPage
+    RegisterPage,
+    DetailsPage,
+    CodeTribePage
   ],
   imports: [
+
+
 
 
 
@@ -32,7 +38,9 @@ import { HttpClientModule } from '@angular/common/http';
     HomePage,
     ProfilePage,
     EditIfomationPage,
-    RegisterPage
+    RegisterPage,
+    DetailsPage,
+    CodeTribePage
   ],
   providers: [
     StatusBar,

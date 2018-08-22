@@ -1,0 +1,42 @@
+<ion-header>
+    <ion-navbar>
+        <div padding>
+            <ion-segment [(ngModel)]="home">
+                <ion-segment-button value="profile">
+                    Profile
+                </ion-segment-button>
+                <ion-segment-button value="tribers">
+                    Codetribe
+                </ion-segment-button>
+            </ion-segment>
+        </div>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding class="segment">
+    <div [ngSwitch]="home">
+        <ion-list *ngSwitchCase="'profile'">
+
+            <ion-item align="center">
+                <h2 style="color:white;font:large;">Baldwinoh Mahole</h2><br>
+                <p style="color:white;font:large;">
+                    Gender: Male<br> Star: Libra <br> Relationship Status:Single
+            </ion-item>
+        </ion-list>
+    </div>
+    <div [ngSwitch]="home">
+        <ion-list *ngSwitchCase="'tribers'" class="list">
+            <ion-list *ngFor="let tribe of tribers;let i=index">
+                <ion-item class="item">
+                    <img id="image" src="./assets/imgs/{{tribe.image}}">
+                    <h2>{{tribe.name}}</h2>
+                    <p>{{tribe.gender}}</p>
+                    <p>{{tribe.email}}</p>
+                    <p>{{tribe.cellNo}}</p>
+                    <p>{{tribe.age}}</p>
+                   
+                </ion-item>
+            </ion-list>
+        </ion-list>
+    </div>
+</ion-content>

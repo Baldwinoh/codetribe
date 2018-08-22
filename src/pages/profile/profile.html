@@ -16,62 +16,26 @@
 
 <ion-content padding class="profile">
     <div class="image">
-        <img src="./assets/imgs/The general.PNG">
+        <img src="./assets/imgs/Boldwin.jpg">
+
+
     </div>
 
+    <div>
+        Name: Baldwin<br> 
+        Surname: Mahole <br>
+        Age: 25 <br>
+        Star: Libra <br> 
+        Hight School: Shikundu High School <br> 
+        University: Tswhane University of Technology <br> 
+        Cell No: 072 062 0890 <br>
+        Province: Limpopo <br>
+        Current Residence: Esselen Park Kemptom Park
 
+    </div>
 
-    <ion-slides pager>
-
-
-        <ion-slide style="background-color:  #fefbd8">
-            <ion-list *ngFor="let info of deatilsInfo">
-                <ion-item>
-                    <p>{{info}}</p>
-                </ion-item>
-            </ion-list>
-
-        </ion-slide>
-
-        <ion-slide style="background-color:  #fefbd8">
-            <h2>Social Networking: </h2>
-            <ion-icon name="logo-twitter"> @BaldwinMahole</ion-icon>
-            <ion-icon name="logo-facebook"> Baldwinoh Mahole</ion-icon>
-            <ion-icon name="logo-linkedin"> Baldwinoh Mahole</ion-icon><br>
-            <ion-icon name="logo-whatsapp"> 072 062 0890</ion-icon><br>
-            <ion-icon name="logo-snapchat"> baldwinoh</ion-icon><br>
-            <ion-icon name="logo-instagram"> Bad Boy</ion-icon><br>
-            <ion-icon name="logo-skype"> @Bald</ion-icon><br>
-        </ion-slide>
-        <ion-slide style="background-color:  #fefbd8">
-            <h2>Favourite Programming Languages</h2>
-            <ion-icon ios="logo-apple" md="logo-android"></ion-icon>
-            <p>Ionic Framework</p>
-            <p>Angular Framework</p>
-            <p>C# </p>
-            <p>Java </p>
-            <p>Python Framework</p>
-        </ion-slide>
-        <ion-slide style="background-color: #fefbd8">
-            <div class="slide2">
-                <h2>Hobbies</h2>
-                <p>Watching soccer</p>
-                <p>Watching Movies</p>
-                <p>Playing soccer</p>
-                <p>Listening to Music</p>
-                <p>Writting the Code</p>
-            </div>
-        </ion-slide>
-    </ion-slides>
-
-    <button ion-button color="royal" round>
-        Save
-      </button>
-
+    <button ion-button color="royal" (click)="getTribers()" full class="btnPro">Check CodeTribers</button>
 </ion-content>
-
-
-
 <ion-footer>
     <ion-toolbar>
         <ion-buttons start>

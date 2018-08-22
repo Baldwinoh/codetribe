@@ -1,9 +1,3 @@
-<!--
-  Generated template for the EditIfomationPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
     <ion-navbar>
@@ -22,7 +16,7 @@
         </ion-item>
 
         <ion-item>
-            <ion-icon ios="ios-key" item-right md="md-key"></ion-icon>
+            <ion-icon ios="ios-person" item-right md="md-person"></ion-icon>
             <ion-label fixed>Surname</ion-label>
             <ion-input [(ngModel)]="surname" type="text"></ion-input>
 
@@ -34,14 +28,14 @@
         </ion-item>
 
         <ion-item>
-            <ion-icon ios="ios-key" item-right md="md-key"></ion-icon>
+            <ion-icon ios="ios-home" item-right md="md-home"></ion-icon>
             <ion-label fixed>Address</ion-label>
             <ion-input [(ngModel)]="address" type="text"></ion-input>
 
         </ion-item>
 
         <ion-item>
-            <ion-icon ios="ios-person" item-right md="md-person"></ion-icon>
+            <ion-icon ios="ios-at" item-right md="md-at"></ion-icon>
             <ion-label fixed>Email</ion-label>
             <ion-input type="text" [(ngModel)]="email"></ion-input>
         </ion-item>
@@ -54,18 +48,10 @@
         </ion-item>
 
         <ion-item>
-            <ion-icon ios="ios-person" item-right md="md-person"></ion-icon>
+            <ion-icon ios="ios-compass" item-right md="md-compass"></ion-icon>
             <ion-label fixed>Company</ion-label>
             <ion-input type="text" [(ngModel)]="Company"></ion-input>
         </ion-item>
-
-        <ion-item>
-            <ion-icon ios="ios-key" item-right md="md-key"></ion-icon>
-            <ion-label fixed>Duration</ion-label>
-            <ion-input [(ngModel)]="duration" type="text"></ion-input>
-        </ion-item>
     </ion-list>
-    <button (click)="logOut()" ion-button icon-only color="royal" round>
-        Log out
-       </button>
+    <button ion-button full><ion-icon ios="ios-add" md="md-add"></ion-icon></button>
 </ion-content>

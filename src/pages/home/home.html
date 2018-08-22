@@ -7,8 +7,9 @@
 </ion-header>
 
 <ion-content padding class="homePage">
-
-
+    <div class="img">
+        <ion-img src="../../assets/imgs/Agera RS.jpg" width="400" height="200"></ion-img>
+    </div>
     <div class="fbButtons">
         <ion-row>
             <ion-col width-30 style="text-align: right">
@@ -16,47 +17,40 @@
             </ion-col>
             <ion-col width-30 style="text-align: left">
                 <button ion-button><ion-icon name="logo-facebook"> login with fb </ion-icon></button>
-
             </ion-col>
         </ion-row>
     </div>
 
     Sign In:
     <ion-list>
-
         <ion-item>
             <ion-icon ios="ios-person" item-right md="md-person"></ion-icon>
             <ion-label fixed>Username</ion-label>
             <ion-input type="text" [(ngModel)]="Username"></ion-input>
         </ion-item>
-
         <ion-item>
             <ion-icon ios="ios-key" item-right md="md-key"></ion-icon>
             <ion-label fixed>Password</ion-label>
             <ion-input [(ngModel)]="password" type="password"></ion-input>
-
         </ion-item>
-
     </ion-list>
-    <ion-item>
-        <ion-label>Keep me signed in</ion-label>
-        <ion-checkbox color="dark"></ion-checkbox>
-    </ion-item>
-
-    <div class="button">
-
-        <button ion-button align-right color="primary" (click)="login()" round> Sign In </button>
+    <div class="fbButtons">
+        <ion-row>
+            <ion-col width-30>
+                <ion-label>Keep me signed in</ion-label>
+                <ion-checkbox color="dark"></ion-checkbox>
+            </ion-col>
+            <ion-col width-30 style="text-align: left">
+                <button ion-button align-right color="primary" (click)="login()" full> Sign In </button>
+                <p>Forgotten your password?</p>
+            </ion-col>
+        </ion-row>
     </div>
-    <div class="paragraph">
-        <p>Forgot your password?</p>
-    </div>
-
-
     <div class="boo">
         <ion-footer>
             <ion-toolbar>
 
-                <button ion-button color="royal" full round (click)="register()"> No Account? register Now </button>
+                <button ion-button color="royal" full (click)="register()"> No Account? register Now </button>
             </ion-toolbar>
         </ion-footer>
 

@@ -2,10 +2,14 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { FormBuilder,FormGroup,FormControl,Validators,FormArray} from '@angular/forms';
 import { EditIfomationPage } from '../edit-ifomation/edit-ifomation';
+
 import { ServicesProvider } from './../../providers/services/services';
 import { HomePage } from '../home/home';
 import { HttpClientModule } from '@angular/common/http'; import { HttpModule } from '@angular/http';
-/**
+import { CodeTribePage } from '../code-tribe/code-tribe';
+/**import { CodeTribePage } from './../code-tribe/code-tribe';
+import { DetailsPage } from './../details/details';
+
  * Generated class for the ProfilePage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
@@ -19,20 +23,12 @@ import { HttpClientModule } from '@angular/common/http'; import { HttpModule } f
 })
 export class ProfilePage {
 
+profile=[];
 
-  name:string;
-  surname:string;
-  age:any;
-  email:any;
-  address:any;
-  cellNo:any;
-  company:string;
-  duration:any;
- deatilsInfo=[];
-
+ 
   public credentialsFG:FormGroup;
   constructor(public navCtrl: NavController, public navParams: NavParams,private formBuilder:FormBuilder,private service:ServicesProvider) {
-    this.deatilsInfo=this.service.getDetail();
+    this.profile=this.service.getEditedProfile();
     
     this.credentialsFG=this.formBuilder.group({
    
@@ -59,10 +55,7 @@ export class ProfilePage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad ProfilePage');
   }
-dispaly(){
-  console.log(this.name, this.surname, this.age, this.address, this.email, this.cellNo, this.company, this.duration)
-  
-}
+
 
 login(){
 
@@ -79,5 +72,7 @@ login(){
     this.navCtrl.push(EditIfomationPage);
     
     }
-  
+    getTribers(){
+      this.navCtrl.push(CodeTribePage)
+    }
 }
